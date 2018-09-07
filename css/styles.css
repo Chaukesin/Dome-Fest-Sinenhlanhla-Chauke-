@@ -1,0 +1,26 @@
+body{
+	background-color: #D8143C;
+}
+
+img{
+
+	 display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (max-width: 864px) {
+	img{
+		 max-width: 100%;
+    height: auto;
+
+	}
+
+
+
+
+
+
+
+
+

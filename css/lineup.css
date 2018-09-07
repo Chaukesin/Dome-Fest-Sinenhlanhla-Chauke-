@@ -1,0 +1,481 @@
+ @import url(https://fonts.googleapis.com/css?family=Lato);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+
+
+/*
+
+All grid code is placed in a 'supports' rule (feature query) at the bottom of the CSS (Line 77). 
+        
+The 'supports' rule will only run if your browser supports CSS grid.
+
+Flexbox is used as a fallback so that browsers which don't support grid will still recieve an identical layout.
+
+*/
+
+/**,
+*::before,
+*::after {
+	box-sizing: border-box;
+}*/
+
+ * {
+      margin: 0;
+      padding: 0;
+      text-decoration: none;
+      list-style: none;
+       box-sizing: border-box;
+
+       
+}
+
+
+
+
+
+body {
+/*	min-height: 100vh;*/
+	  background: url(../img/dome.jpg);
+    background-size: 60%;
+
+}
+
+
+
+
+
+
+
+nav {
+      width: 100%;
+      background: #D8143C;
+      height: 170px;
+      position: fixed;
+      z-index: 100;
+
+}
+
+nav #brand {
+      float: left;
+      display: block;
+      margin-left: 84px;
+      font-size: 30px;
+      line-height: 70px;
+      font-weight: bold;
+}
+
+nav #brand a {
+      color: #fff;
+      transition: all 0.3s ease-out;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 300;
+}
+
+
+#brand img{
+
+  height:13%; 
+  width:13%;
+  float: left;
+}
+
+
+
+nav #menu {
+      float: left;
+      left: 35%;
+      position: absolute;
+      top: 90px;
+}
+
+nav #menu li {
+      display: inline-block;
+      padding: 0px 30px;
+      cursor: pointer;
+      line-height: 70px;
+      position: relative;
+      transition: all 0.3s ease-out;
+}
+
+nav #menu li a {
+      color: #fff;
+     font-family: 'Montserrat', sans-serif;
+      font-weight: 200;
+       padding: 20px;
+}
+
+nav #menu li a:hover {
+    background-color:#E19705;
+   
+
+
+
+}
+
+
+
+
+#toggle {
+      position: absolute;
+      right: 20px;
+      top: 14px;
+      z-index: 999;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      float: right;
+      transition: all 0.3s ease-out;
+      visibility: hidden;
+      opacity: 0;
+}
+
+#toggle .span {
+      height: 3px;
+      background: #fff;
+      transition: all 0.3s ease-out;
+      backface-visibility: hidden;
+      margin: 5px auto;
+}
+
+#toggle.on #one {
+      transform: rotate(45deg) translateX(2px) translateY(4px);
+}
+
+#toggle.on #two {
+      opacity: 0;
+}
+
+#toggle.on #three {
+      transform: rotate(-45deg) translateX(8px) translateY(-10px);
+}
+
+#resize {
+      z-index: 1;
+      top: 0px;
+      position: absolute;
+      background: #000;
+      width: 100%;
+      height: 100%;
+      visibility: hidden;
+      opacity: 0;
+      transition: all 1s ease-out;
+      display: table;
+}
+
+#resize #menu {
+      height: 90px;
+      display: table-cell;
+      vertical-align: center;
+}
+
+#resize #menu li {
+      display: block;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 50px;
+      min-height: 50px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease-out;
+}
+
+#resize li:nth-child(1) {
+      margin-top:140px;
+}
+
+#resize #menu li a {
+      color: #fff;
+}
+
+#resize.active {
+      visibility: visible;
+      opacity: 0.99;
+}
+
+
+
+
+/*--------------------
+        MEDIA QUETRYS
+        --------------------*/
+
+        @media(max-width: 960px) {
+      #toggle {
+            visibility: visible;
+            opacity: 1;
+            margin-top: 6px;
+      }
+
+      nav #brand {
+            margin-left: 18px;
+      }
+
+      #menu a {
+           font-family: 'Montserrat', sans-serif;
+            font-weight: 200;
+            font-size: 20px;
+      }
+
+      nav #menu {
+            display: none;
+      }
+}
+
+@media(min-width: 960px) {
+      #resize {
+            visibility: hidden !important;
+      }
+}
+
+
+/*---------------------------------------------
+ICONS-------------------------------*/
+
+ nav #icons {
+  float: right;
+     /* left: 35%;
+      position: absolute;*/
+      top: 90px;
+      display: inline;
+}
+
+
+social-icons {
+    width: 350px;
+    display:block;
+    margin: 0 auto;
+}
+.social-icon {
+    color: #fff;
+    font-size: 30px;
+}
+#icons .social-icons {
+    margin-top: 10px;
+}
+.social-icons li {
+    vertical-align: top;
+
+    display: inline;
+    height: 100px;
+}
+.social-icons a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.fa-facebook  {
+    padding:10px 24px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #352979;
+}
+.fa-facebook:hover {
+    background-color: #E19705;
+}
+
+.fa-twitter  {
+    padding:10px 19px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #352979;
+}
+.fa-twitter:hover {
+    background-color: #E19705;
+}
+
+.fa-youtube  {
+    padding:10px 19px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #352979;
+}
+.fa-youtube:hover {
+    background-color: #E19705;
+}
+.fa-instagram  {
+    padding:10px 19px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #352979;
+}
+.fa-instagram:hover {
+    background-color: #E19705;
+}
+
+
+
+
+
+
+
+
+
+
+/*-----------------------
+stop watch
+----------------------*/
+
+ ul#countdown {
+       position: relative;
+    top: 50%;
+    transform: translateY(-0%);
+    /* width: 90%; */
+    margin: 0 auto;
+    padding: 230px 0 50px 0;
+    color: #fff;
+    /* border: 1px solid #adafb2; */
+    border-width: 1px 0;
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    display: flex;
+    background-color: #e9aa31;
+}
+ ul#countdown li {
+  margin: 0 -3px 0 0;
+  padding: 0;
+  display: inline-block;
+  width: 25%;
+  font-size: 72px;
+  font-size: 6vw;
+  text-align: center;
+}
+ul#countdown li .label {
+  color: white;
+  font-size: 18px;
+  font-size: 1.5vw;
+  text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container {
+	max-width: 100rem;
+	margin: 0 auto;
+	padding: 8rem 2rem 2rem;
+}
+
+.heading {
+	font-family: "Montserrat", Arial, sans-serif;
+	font-size: 4rem;
+	font-weight: 500;
+	line-height: 1.5;
+	text-align: center;
+	padding: 3.5rem 0;
+	color: #1a1a1a;
+}
+
+.heading span {
+	display: block;
+}
+
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	/* Compensate for excess margin on outer gallery flex items */
+	margin: -1rem -1rem;
+}
+
+.gallery-item {
+	/* Minimum width of 24rem and grow to fit available space */
+	flex: 1 0 24rem;
+	/* Margin value should be half of grid-gap value as margins on flex items don't collapse */
+	margin: 1rem;
+	box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+	overflow: hidden;
+  display: flex;
+}
+
+.gallery-image {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 400ms ease-out;
+}
+
+.gallery-image:hover {
+	transform: scale(1.15);
+ 
+}
+
+.gallery-item  p{
+   font-family: 'Montserrat', sans-serif;
+      font-weight: 200;
+
+
+}
+
+
+.gallery-item p{
+
+   font-family: 'Montserrat', sans-serif;
+  color: white;
+    display: flex;
+  flex-wrap: wrap;
+    flex: 1 0 24rem;
+  /* Compensate for excess margin on outer gallery flex items */
+  margin: -1rem -1rem;
+  z-index: 1;
+
+
+}
+
+
+
+
+
+
+
+
+
+/*
+
+The following rule will only run if your browser supports CSS grid.
+
+Remove or comment-out the code block below to see how the browser will fall-back to flexbox styling. 
+
+*/
+
+@supports (display: grid) {
+	.gallery {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+		grid-gap: 2rem;
+	}
+
+	.gallery,
+	.gallery-item {
+		margin: 0;
+	}
+}

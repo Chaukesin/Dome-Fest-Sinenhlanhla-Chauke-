@@ -1,0 +1,365 @@
+body {
+  margin: 0;
+ font-family: 'Montserrat', sans-serif;
+  font-size: 25px;
+/*  background-color: #E19705;*/
+  font-kerning: 10px;
+
+}
+
+
+section img{
+      width: 7%;
+    height: auto;
+    padding-left: 50px;
+    padding-top: 40px;
+}
+
+h1 {
+  font-weight: medium;
+  text-align: center;
+  margin-bottom: 1.5em;
+  margin-left: 2%;
+  color: white;
+  letter-spacing: 3px;
+  background-color: #E19705;
+  padding: 10px;
+  
+}
+
+h2 {
+  text-align: center;
+  color: #555;
+  margin-bottom: 0;
+  color: white;
+  letter-spacing: 30px;
+}
+
+.carousel {
+  padding: 20px;
+  -webkit-perspective: 500px;
+          perspective: 500px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+      margin-top: 70px;
+
+}
+.carousel > * {
+  flex: 0 0 auto;
+}
+.carousel figure {
+  margin: 0;
+  width: 40%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+.carousel figure div{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 0px;
+}
+.carousel figure div:not(:first-of-type) {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.carousel nav {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 0;
+  color: white;
+  margin-left: 100px;
+}
+.carousel nav button {
+  flex: 0 0 auto;
+  margin: 0 5px;
+  cursor: pointer;
+  color: #333;
+  background: none;
+  border: 1px solid;
+  letter-spacing: 1px;
+  padding: 5px 10px;
+  color: white;
+}
+
+button{
+	font-family: 'Montserrat', sans-serif;
+	margin-left: 47%;
+	 
+    border: 2px solid white;
+ 
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+     background-color: #D8143C; 
+    color: white; 
+    letter-spacing: 2px;
+    }
+
+.button:hover {
+	 -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    background-color: white;
+    color: #D8143C;
+}
+
+
+ nav #icons {
+  float: right;
+     /* left: 35%;
+      position: absolute;*/
+      top: 90px;
+      display: inline;
+}
+
+
+social-icons {
+    width: 350px;
+    display:block;
+    margin: 0 auto;
+}
+.social-icon {
+    color: #fff;
+    font-size: 30px;
+}
+#icons .social-icons {
+    margin-top: 10px;
+}
+.social-icons li {
+    vertical-align: top;
+
+    display: inline;
+    height: 100px;
+}
+.social-icons a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.fa-facebook  {
+    padding:10px 24px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #352979;
+}
+.fa-facebook:hover {
+    background-color: #E19705;
+}
+
+.fa-twitter  {
+    padding:10px 19px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #352979;
+}
+.fa-twitter:hover {
+    background-color: #E19705;
+}
+
+.fa-youtube  {
+    padding:10px 19px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #352979;
+}
+.fa-youtube:hover {
+    background-color: #E19705;
+}
+.fa-instagram  {
+    padding:10px 19px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #352979;
+}
+.fa-instagram:hover {
+    background-color: #E19705;
+}
+
+nav {
+      width: 100%;
+      background: #D8143C;
+      height: 170px;
+      position: fixed;
+      z-index: 100;
+
+}
+
+nav #brand {
+      float: left;
+      display: block;
+      margin-left: 84px;
+      font-size: 30px;
+      line-height: 70px;
+      font-weight: bold;
+}
+
+nav #brand a {
+      color: #fff;
+      transition: all 0.3s ease-out;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 300;
+}
+
+
+#brand img{
+
+  height:13%; 
+  width:13%;
+  float: left;
+}
+
+
+
+nav #menu {
+      float: left;
+      left: 35%;
+      position: absolute;
+      top: 90px;
+}
+
+nav #menu li {
+      display: inline-block;
+      padding: 0px 30px;
+      cursor: pointer;
+      line-height: 70px;
+      position: relative;
+      transition: all 0.3s ease-out;
+}
+
+nav #menu li a {
+      color: #fff;
+     font-family: 'Montserrat', sans-serif;
+      font-weight: 200;
+       padding: 20px;
+}
+
+nav #menu li a:hover {
+    background-color:#E19705;
+   
+
+
+
+}
+
+
+
+
+#toggle {
+      position: absolute;
+      right: 20px;
+      top: 14px;
+      z-index: 999;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      float: right;
+      transition: all 0.3s ease-out;
+      visibility: hidden;
+      opacity: 0;
+}
+
+#toggle .span {
+      height: 3px;
+      background: #fff;
+      transition: all 0.3s ease-out;
+      backface-visibility: hidden;
+      margin: 5px auto;
+}
+
+#toggle.on #one {
+      transform: rotate(45deg) translateX(2px) translateY(4px);
+}
+
+#toggle.on #two {
+      opacity: 0;
+}
+
+#toggle.on #three {
+      transform: rotate(-45deg) translateX(8px) translateY(-10px);
+}
+
+#resize {
+      z-index: 1;
+      top: 0px;
+      position: absolute;
+      background: #000;
+      width: 100%;
+      height: 100%;
+      visibility: hidden;
+      opacity: 0;
+      transition: all 1s ease-out;
+      display: table;
+}
+
+#resize #menu {
+      height: 90px;
+      display: table-cell;
+      vertical-align: center;
+}
+
+#resize #menu li {
+      display: block;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 50px;
+      min-height: 50px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease-out;
+}
+
+#resize li:nth-child(1) {
+      margin-top:140px;
+}
+
+#resize #menu li a {
+      color: #fff;
+}
+
+#resize.active {
+      visibility: visible;
+      opacity: 0.99;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
